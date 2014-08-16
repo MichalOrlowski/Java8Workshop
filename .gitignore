@@ -1,0 +1,5 @@
+*.classpath
+/trunk/*.project
+/trunk/.settings/org.eclipse.core.resources.prefs
+/trunk/.settings/org.eclipse.jdt.core.prefs
+/trunk/.settings/org.eclipse.m2e.core.prefs
