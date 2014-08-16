@@ -29,7 +29,7 @@ public class SortingExampleTest {
 		List<String> actualLanguageNames = Arrays.asList("Java", "Scala",
 				"Groovy", "Clojure");
 
-		sortingExample.oldSchoolSorting(actualLanguageNames);
+		sortingExample.sortStringList(actualLanguageNames);
 
 		Assert.assertEquals(expectedLanguageNames, actualLanguageNames);
 	}
@@ -39,7 +39,7 @@ public class SortingExampleTest {
 		List<String> actualLanguageNames = Arrays.asList("Java", "Scala",
 				"Groovy", "Clojure");
 
-		sortingExample.java8Sorting(actualLanguageNames);
+		sortingExample.sortStringListLikeABoss(actualLanguageNames);
 
 		Assert.assertEquals(expectedLanguageNames, actualLanguageNames);
 	}

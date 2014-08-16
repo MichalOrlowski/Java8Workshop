@@ -17,7 +17,7 @@ public class SortingExample {
 	 * 
 	 * @return
 	 */
-	public List<String> oldSchoolSorting(List<String> stringList) {
+	public List<String> sortStringList(List<String> stringList) {
 		Collections.sort(stringList, new Comparator<String>() {
 			@Override
 			public int compare(String a, String b) {
@@ -34,7 +34,7 @@ public class SortingExample {
 	 * @param stringList
 	 * @return
 	 */
-	public List<String> java8Sorting(List<String> stringList) {
+	public List<String> sortStringListLikeABoss(List<String> stringList) {
 		// Collections.sort(stringList, (String a, String b) -> {
 		// return b.compareTo(a);
 		// });
