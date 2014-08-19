@@ -7,5 +7,5 @@ package pl.jcommerce.examples.model;
  *
  */
 public enum Language {
-	JAVA, GROOVY, SCALA, CLOJURE
+	CLOJURE, GROOVY, JAVA, JAVA_SCRIPT, PYTHON, RUBY, SCALA
 }
