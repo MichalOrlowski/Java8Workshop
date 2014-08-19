@@ -11,21 +11,41 @@ import java.util.Objects;
  */
 public class Developer {
 
-	private String name;
+	private String firstName;
+	private String lastName;
+	private String email;
 	private List<Language> programmingLanguages;
 
-	public Developer(String name, List<Language> programmingLanguages) {
+	public Developer(String firstName, String lastName, String email, List<Language> programmingLanguages) {
 		super();
-		this.name = name;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
 		this.programmingLanguages = programmingLanguages;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstName(String name) {
+		this.firstName = name;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public List<Language> getProgrammingLanguages() {
@@ -38,7 +58,7 @@ public class Developer {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, programmingLanguages);
+		return Objects.hash(firstName, lastName, email, programmingLanguages);
 	}
 
 	@Override
@@ -49,12 +69,18 @@ public class Developer {
 
 		if (obj instanceof Developer) {
 			Developer other = (Developer) obj;
-			return Objects.equals(name, other.name)
-					&& Objects.equals(programmingLanguages,
-							other.programmingLanguages);
+			return Objects.equals(firstName, other.firstName)
+					&& Objects.equals(lastName, other.lastName)
+					&& Objects.equals(email, other.email)
+					&& Objects.equals(programmingLanguages, other.programmingLanguages);
 		}
 
 		return false;
+	}
+	
+	@Override
+	public String toString() {
+		return firstName + " " + lastName + " (" + email + ")";
 	}
 
 }
