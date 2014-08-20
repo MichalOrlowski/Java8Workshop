@@ -23,7 +23,7 @@ public class GroupByLanguageExampleTest {
 
 	private GroupByLanguageExample groupByLanguageExample;
 	private List<Developer> developers;
-	private Map<Language, List<Developer>> expecteGroupedByLanguage;
+	private Map<Language, List<Developer>> expectedGroupedByLanguage;
 	
 	@Before
 	public void init() {
@@ -32,25 +32,23 @@ public class GroupByLanguageExampleTest {
 		Developer dev2 = new Developer("Betty", "Scott", "betty.scott@yahoo.com", asList(RUBY, JAVA_SCRIPT));
 		Developer dev3 = new Developer("Robert", "Carter", "robert.carter@gmail.com", asList(GROOVY, JAVA));
 		developers = Arrays.asList(dev1, dev2, dev3);
-		expecteGroupedByLanguage = new HashMap<>();
-		expecteGroupedByLanguage.put(GROOVY, asList(dev3));
-		expecteGroupedByLanguage.put(JAVA, asList(dev1, dev3));
-		expecteGroupedByLanguage.put(JAVA_SCRIPT, asList(dev2));
-		expecteGroupedByLanguage.put(RUBY, asList(dev2));
-		expecteGroupedByLanguage.put(SCALA, asList(dev1));
-		
-		
+		expectedGroupedByLanguage = new HashMap<>();
+		expectedGroupedByLanguage.put(GROOVY, asList(dev3));
+		expectedGroupedByLanguage.put(JAVA, asList(dev1, dev3));
+		expectedGroupedByLanguage.put(JAVA_SCRIPT, asList(dev2));
+		expectedGroupedByLanguage.put(RUBY, asList(dev2));
+		expectedGroupedByLanguage.put(SCALA, asList(dev1));
 	}
 	
 	@Test
 	public void shouldGroupByLanguageOldWay() {
 		Map<Language, List<Developer>> actualGroupedByLanguage = groupByLanguageExample.groupByLanguageOldWay(developers); 
-		Assert.assertEquals(expecteGroupedByLanguage, actualGroupedByLanguage);
+		Assert.assertEquals(expectedGroupedByLanguage, actualGroupedByLanguage);
 	}
 	
 	@Test
 	public void shouldGroupByLanguageNewWay() {
 		Map<Language, List<Developer>> actualGroupedByLanguage = groupByLanguageExample.groupByLanguageNewWay(developers); 
-		Assert.assertEquals(expecteGroupedByLanguage, actualGroupedByLanguage);
+		Assert.assertEquals(expectedGroupedByLanguage, actualGroupedByLanguage);
 	}
 }
