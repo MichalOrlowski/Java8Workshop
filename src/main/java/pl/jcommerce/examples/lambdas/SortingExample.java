@@ -42,6 +42,9 @@ public class SortingExample {
 		// Collections.sort(stringList, (String a, String b) -> b.compareTo(a));
 
 		Collections.sort(stringList, (a, b) -> b.compareTo(a));
+		
+		// Use default metod in List interface	
+		//stringList.sort((a, b) -> b.compareTo(a));
 
 		return stringList;
 	}
