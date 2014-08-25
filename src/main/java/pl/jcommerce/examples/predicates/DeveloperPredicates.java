@@ -5,6 +5,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import pl.jcommerce.examples.model.Developer;
+import pl.jcommerce.examples.model.Language;
 
 /**
  * Developer predicates
@@ -30,6 +31,14 @@ public class DeveloperPredicates {
 	 */
 	public static Predicate<Developer> isOlderThan(Integer age) {
 		return d -> d.getAge() > age;
+	}
+
+	/**
+	 * Produces a predicate that tests if given developer
+	 * is a Java developer.
+	 */
+	public static Predicate<Developer> isJavaDeveloper() {
+		return d -> d.getProgrammingLanguages().contains(Language.JAVA);
 	}
 	
 	/**

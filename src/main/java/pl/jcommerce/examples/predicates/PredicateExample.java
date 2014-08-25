@@ -2,6 +2,7 @@ package pl.jcommerce.examples.predicates;
 
 import static pl.jcommerce.examples.predicates.DeveloperPredicates.filterDevelopers;
 import static pl.jcommerce.examples.predicates.DeveloperPredicates.isAdult;
+import static pl.jcommerce.examples.predicates.DeveloperPredicates.isJavaDeveloper;
 import static pl.jcommerce.examples.predicates.DeveloperPredicates.isOlderThan;
 
 import java.util.List;
@@ -34,5 +35,17 @@ public class PredicateExample {
 	 */
 	public List<Developer> filterDevelopersOlderThan(Integer age, List<Developer> developers) {
 		return filterDevelopers(developers, isOlderThan(age));
+	}
+	
+	/**
+	 * Filter developers older than 35 and are Jave developers 
+	 * 
+	 * @param developers
+	 * 
+	 * @see DeveloperPredicates#isOlderThan(Integer)
+	 * @see DeveloperPredicates#isJavaDeveloper()
+	 */
+	public List<Developer> filterOldJavaDevelopers(List<Developer> developers) {
+		return filterDevelopers(developers, isOlderThan(35).and(isJavaDeveloper()));
 	}
 }

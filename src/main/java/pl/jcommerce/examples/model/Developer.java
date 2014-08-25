@@ -1,5 +1,6 @@
 package pl.jcommerce.examples.model;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -27,11 +28,12 @@ public class Developer {
 	}
 	
 	public Developer(String firstName, String lastName,
-			Integer age) {
+			Integer age, Language ... languages) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
+		this.programmingLanguages = Arrays.asList(languages);
 	}
 
 	public String getFirstName() {
