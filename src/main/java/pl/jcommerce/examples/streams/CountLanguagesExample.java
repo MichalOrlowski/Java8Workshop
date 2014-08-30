@@ -17,7 +17,6 @@ public class CountLanguagesExample {
 		Map<Language, Long> countByLanguage = new HashMap<>();
 		for (Developer dev : developers) {
 			for (Language lang : dev.getProgrammingLanguages()) {
-				countByLanguage.putIfAbsent(lang, (long) 0);
 				Long count = countByLanguage.get(lang);
 				if (count == null) {
 					count = (long) 0;
