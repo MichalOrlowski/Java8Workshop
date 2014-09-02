@@ -14,22 +14,10 @@ public class Developer {
 
 	private String firstName;
 	private String lastName;
-	private String email;
 	private Integer age;
 	private List<Language> programmingLanguages;
-
-	public Developer(String firstName, String lastName, String email,
-			List<Language> programmingLanguages) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.programmingLanguages = programmingLanguages;
-	}
 	
-	public Developer(String firstName, String lastName,
-			Integer age, Language ... languages) {
-		super();
+	public Developer(String firstName, String lastName, Integer age, Language ... languages) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -52,14 +40,6 @@ public class Developer {
 		this.lastName = lastName;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	public List<Language> getProgrammingLanguages() {
 		return programmingLanguages;
 	}
@@ -78,8 +58,7 @@ public class Developer {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(firstName, lastName, email, age,
-				programmingLanguages);
+		return Objects.hash(firstName, lastName, age, programmingLanguages);
 	}
 
 	@Override
@@ -92,7 +71,6 @@ public class Developer {
 			Developer other = (Developer) obj;
 			return Objects.equals(firstName, other.firstName)
 					&& Objects.equals(lastName, other.lastName)
-					&& Objects.equals(email, other.email)
 					&& Objects.equals(age,  other.age)
 					&& Objects.equals(programmingLanguages, other.programmingLanguages);
 		}
@@ -102,7 +80,7 @@ public class Developer {
 
 	@Override
 	public String toString() {
-		return firstName + " " + lastName + " (" + email + ")";
+		return firstName + " " + lastName + " (" + age + ")";
 	}
 
 }

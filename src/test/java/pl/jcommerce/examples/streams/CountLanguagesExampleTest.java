@@ -1,6 +1,5 @@
 package pl.jcommerce.examples.streams;
 
-import static java.util.Arrays.asList;
 import static pl.jcommerce.examples.model.Language.GROOVY;
 import static pl.jcommerce.examples.model.Language.JAVA;
 import static pl.jcommerce.examples.model.Language.JAVA_SCRIPT;
@@ -29,10 +28,10 @@ public class CountLanguagesExampleTest {
 	public void init() {
 		countLanguagesExample = new CountLanguagesExample();
 		developers = Arrays.asList(
-				new Developer("John", "Scott", "john.scott@gmail.com", asList(JAVA, SCALA)),
-				new Developer("Betty", "Scott", "betty.scott@yahoo.com", asList(RUBY, JAVA_SCRIPT)),
-				new Developer("Robert", "Carter", "robert.carter@gmail.com", asList(GROOVY, JAVA)),
-				new Developer("Tom", "Wood", "tom.wood@hotmail.com", asList(JAVA, JAVA_SCRIPT)));
+				new Developer("John", "Scott", 20, JAVA, SCALA),
+				new Developer("Betty", "Scott", 32, RUBY, JAVA_SCRIPT),
+				new Developer("Robert", "Carter", 32, GROOVY, JAVA),
+				new Developer("Tom", "Wood", 41, JAVA, JAVA_SCRIPT));
 		expectedCounts = new HashMap<>();
 		expectedCounts.put(GROOVY, (long) 1);
 		expectedCounts.put(JAVA, (long) 3);

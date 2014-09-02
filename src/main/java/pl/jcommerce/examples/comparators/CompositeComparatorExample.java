@@ -19,7 +19,7 @@ public class CompositeComparatorExample {
 				if (result != 0) {
 					return result;
 				}
-				return d1.getEmail().compareTo(d2.getEmail());
+				return d1.getAge().compareTo(d2.getAge());
 			}
 		};
 	}
@@ -27,7 +27,7 @@ public class CompositeComparatorExample {
 	public Comparator<Developer> createCompositeComparatorNewWay() {
 		return Comparator.comparing(Developer::getLastName)
 				.thenComparing(Developer::getFirstName)
-				.thenComparing(Developer::getEmail);
+				.thenComparing(Developer::getAge);
 	}
 	
 }

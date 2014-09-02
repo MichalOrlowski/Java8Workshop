@@ -6,8 +6,6 @@ import java.util.List;
 import pl.jcommerce.examples.model.Developer;
 import pl.jcommerce.examples.model.Language;
 
-import com.google.common.collect.Lists;
-
 /**
  * Developers POJO generator
  * 
@@ -27,8 +25,7 @@ public class DevelopersGenerator {
 		for (Language lang : languages) {
 			String firstName = lang.name();
 			String lastName = "Dev";
-			String email = (firstName + lastName + "@dev.com").toLowerCase();
-			developersList.add(new Developer(firstName, lastName, email, Lists.newArrayList(lang)));
+			developersList.add(new Developer(firstName, lastName, null, languages));
 		}
 		return developersList;
 	}

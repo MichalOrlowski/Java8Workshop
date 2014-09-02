@@ -29,11 +29,11 @@ public class CompositeComparatorExampleTest {
 	@Before
 	public void init() {
 		compositeComparatorExample = new CompositeComparatorExample();
-		Developer dev1 = new Developer("John", "Scott", "john.scott@gmail.com", asList(JAVA, SCALA));
-		Developer dev2 = new Developer("Betty", "Scott", "betty.scott@yahoo.com", asList(RUBY, JAVA_SCRIPT));
-		Developer dev3 = new Developer("Robert", "Carter", "robert.carter@gmail.com", asList(GROOVY, JAVA));
-		Developer dev4 = new Developer("Sandra", "Parker", "sandra.parker@hotmail.com", asList(PYTHON));
-		Developer dev5 = new Developer("Sandra", "Parker", "sandra.parker@gmail.com", asList(CLOJURE));
+		Developer dev1 = new Developer("John", "Scott", 20, JAVA, SCALA);
+		Developer dev2 = new Developer("Betty", "Scott", 32, RUBY, JAVA_SCRIPT);
+		Developer dev3 = new Developer("Robert", "Carter", 32, GROOVY, JAVA);
+		Developer dev4 = new Developer("Sandra", "Parker", 27, PYTHON);
+		Developer dev5 = new Developer("Sandra", "Parker", 24, CLOJURE);
 		unsortedDevelopers = new ArrayList<>(asList(dev1, dev2, dev3, dev4, dev5));
 		sortedDevelopers = new ArrayList<>(asList(dev3, dev5, dev4, dev2, dev1));
 	}
