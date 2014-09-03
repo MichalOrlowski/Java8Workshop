@@ -55,12 +55,14 @@ public class OptionalExampleTest {
 		assertEquals(10, optionalDouble.orElseGet(() -> 10), 0);
 
 		// or
-		DoubleSupplier doubleSupplier = new DoubleSupplier() {
+		/*DoubleSupplier doubleSupplier = new DoubleSupplier() {
 			@Override
 			public double getAsDouble() {
 				return 10;
 			}
-		};
+		};*/
+
+        DoubleSupplier doubleSupplier = () -> 10;
 
 		assertEquals(10, optionalDouble.orElseGet(doubleSupplier), 0);
 	}
