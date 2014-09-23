@@ -1,15 +1,11 @@
 package pl.jcommerce.examples.streams;
 
-import pl.jcommerce.examples.model.Developer;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
-import static pl.jcommerce.examples.model.Language.*;
-import static pl.jcommerce.examples.model.Language.JAVA;
+import pl.jcommerce.examples.model.Developer;
+import pl.jcommerce.examples.model.DevelopersRepository;
 
 /**
  * Examples with flatMap() exercises
@@ -18,12 +14,7 @@ import static pl.jcommerce.examples.model.Language.JAVA;
  */
 public class FlatMapExample {
 
-    List<Developer> developers = Arrays.asList(
-            new Developer("John", "Scott", 20, JAVA, SCALA),
-            new Developer("Betty", "Scott", 32, RUBY, JAVA_SCRIPT),
-            new Developer("Robert", "Carter", 32, GROOVY, JAVA),
-            new Developer("Tom", "Wood", 41, JAVA, JAVA_SCRIPT),
-            new Developer("Michael", "Beer", 36, JAVA));
+    List<Developer> developers = DevelopersRepository.getSampleList();
 
 
     public static void main(String[] args) {

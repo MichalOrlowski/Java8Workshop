@@ -1,11 +1,9 @@
 package pl.jcommerce.examples.streams;
 
-import pl.jcommerce.examples.model.Developer;
-
-import java.util.Arrays;
 import java.util.List;
 
-import static pl.jcommerce.examples.model.Language.*;
+import pl.jcommerce.examples.model.Developer;
+import pl.jcommerce.examples.model.DevelopersRepository;
 
 /**
  * Example with reduce() method
@@ -14,12 +12,7 @@ import static pl.jcommerce.examples.model.Language.*;
  */
 public class ReduceExample {
 
-    List<Developer> developers = Arrays.asList(
-            new Developer("John", "Scott", 20, JAVA, SCALA),
-            new Developer("Betty", "Scott", 32, RUBY, JAVA_SCRIPT),
-            new Developer("Robert", "Carter", 32, GROOVY, JAVA),
-            new Developer("Tom", "Wood", 41, JAVA, JAVA_SCRIPT),
-            new Developer("Michael", "Beer", 36, JAVA));
+    List<Developer> developers = DevelopersRepository.getSampleList();
 
     public static void main(String[] args) {
         ReduceExample re = new ReduceExample();
