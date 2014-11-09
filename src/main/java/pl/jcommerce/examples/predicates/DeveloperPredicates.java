@@ -1,5 +1,6 @@
 package pl.jcommerce.examples.predicates;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -49,6 +50,16 @@ public class DeveloperPredicates {
 	 * @return
 	 */
 	public static List<Developer> filterDevelopers(List<Developer> developers, Predicate<Developer> predicate) {
-		return developers.stream().filter(predicate).collect(Collectors.toList());
+        List<Developer> filteredList = new ArrayList<>();
+        for(Developer dev : developers) {
+            if(predicate.test(dev)) {
+                filteredList.add(dev);
+            }
+        }
+
+        return filteredList;
+
+        // Solution with Stream API
+		//return developers.stream().filter(predicate).collect(Collectors.toList());
 	}
 }
