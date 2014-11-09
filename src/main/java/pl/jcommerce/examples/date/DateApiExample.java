@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * Data API live demo examples
@@ -12,12 +13,14 @@ import java.util.Date;
  * @author Michal Orlowski
  *
  */
-public class DataApiExample {
+public class DateApiExample {
 
 	public static void main(String[] args) {
 
+        System.out.println(LocalDate.of(12, 12, 12));
+
 		// System.currentTimeMillis()
-		Clock clock = Clock.systemDefaultZone();
+		/*Clock clock = Clock.systemDefaultZone();
 		clock.millis();
 
         //Duration Period
@@ -37,7 +40,7 @@ public class DataApiExample {
 				.ofPattern("MMM dd, yyyy - HH:mm");
 		
 		LocalDateTime formatDate = LocalDateTime.now();
-		System.out.println(formatter.format(formatDate));
+		System.out.println(formatter.format(formatDate));*/
 
 	}
 
