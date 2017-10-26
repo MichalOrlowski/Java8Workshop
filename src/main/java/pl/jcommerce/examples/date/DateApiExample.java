@@ -19,7 +19,7 @@ public class DateApiExample {
 
         System.out.println(LocalDate.of(12, 12, 12));
 
-        // Checking again
+        // Test z Marcinem
 
 		// System.currentTimeMillis()
 		/*Clock clock = Clock.systemDefaultZone();
