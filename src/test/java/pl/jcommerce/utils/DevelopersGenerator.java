@@ -14,6 +14,7 @@ import pl.jcommerce.examples.model.Language;
  */
 public class DevelopersGenerator {
 
+	
 	/**
 	 * Generate developers list with specified languages and Dev(N) names
 	 * 
