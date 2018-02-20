@@ -12,10 +12,7 @@ import pl.jcommerce.examples.model.Language;
  * @author Michal Orlowski
  *
  */
-public class DevelopersGenerator {	
-	
-
-
+public class DevelopersGenerator {
 
 	/**
 	 * Generate developers list with specified languages and Dev(N) names
@@ -26,7 +23,7 @@ public class DevelopersGenerator {
 	public static List<Developer> generateDevsWithSpecifiedLanguages(Language... languages) {
 		List<Developer> developersList = new ArrayList<Developer>();
 		for (Language lang : languages) {
-			String firstName =  lang.name();
+			String firstName = lang.name();
 			String lastName = "Dev";
 			developersList.add(new Developer(firstName, lastName, null, languages));
 		}
