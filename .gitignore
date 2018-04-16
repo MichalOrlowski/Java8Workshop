@@ -5,6 +5,7 @@
 /.settings/org.eclipse.jdt.core.prefs
 /.settings/org.eclipse.m2e.core.prefs
 *.iml
+.idea/
 /.idea/.name
 /.idea/compiler.xml
 /.idea/copyright/profiles_settings.xml
