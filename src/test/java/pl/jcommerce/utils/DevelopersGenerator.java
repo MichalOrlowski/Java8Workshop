@@ -27,6 +27,7 @@ public class DevelopersGenerator {
 			String lastName = "Dev";
 			developersList.add(new Developer(firstName, lastName, null, languages));
 		}
+
 		return developersList;
 	}
 }
