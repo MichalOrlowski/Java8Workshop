@@ -8,6 +8,7 @@ import java.util.*;
 
 /**
  * Java 8 Date API exercises
+ * Bardzo wazna zmiana
  *
  * @author Michal Orlowski
  */
